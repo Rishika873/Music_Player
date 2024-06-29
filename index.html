@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+    <title>Music Player</title>
+</head>
+<body>  
+    <audio id="music-player" controls>
+        <source id="audio-source" src="" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      
+   <script src="script.js"></script>
+     <header>
+        <div class="menu_side">
+            <h1>Playlist</h1>
+
+            <div class="playlist">
+                <h4 class="active"> <span> </span><i class="bi bi-music-note-beamed"></i> Playlist</h4>
+                <h4> <span> </span><i class="bi bi-music-note-beamed"></i>Last Listening</h4>
+                <h4> <span> </span><i class="bi bi-music-note-beamed"></i>Recommended</h4>
+            </div>
+
+
+            <div class="menu_song">
+                <ul id="playlist">
+                    <li class="songItem">
+                        <span>01</span>
+                        <img src="images/1.jpg" alt="">
+                        <i class="bi playIcon bi-play-circle-fill" onclick="playMusic('audio/2.mp3')"></i>
+                        <a href="#" ><h5>On My Way <br> <div class="subtitle">Alan Walker</div></h5></a></li>
+
+
+                     <li class="songItem">
+                        <span>02</span>
+                        <img src="images/A1.jpg" alt="">
+                        <i class="bi playIcon bi-play-circle-fill" onclick="playMusic('audio/1.mp3')" ></i>
+                        <a href="#" > <h5>Agar Tum Sath Ho <br> <div class="subtitle">Arijit Singh</div></h5></a></li>
+
+
+                        <li class="songItem">
+                            <span>03</span>
+                            <img src="images/A2.avif" alt="">
+                            <i class="bi playIcon bi-play-circle-fill"  onclick="playMusic('audio/3.mp3')"></i>
+                            <a href="#"> <h5>Dilbar <br> <div class="subtitle">Neha Kakkar</div></h5></a></li>
+
+
+                        <li class="songItem">
+                            <span>04</span>
+                            <img src="images/A3.jpg" alt="">
+                            <i class="bi playIcon bi-play-circle-fill" onclick="playMusic('audio/4.mp3')"></i>
+                            <a href="#" > <h5>Param Sundari <br> <div class="subtitle">Shreya Ghoshal</div></h5></a></li>
+                        <li class="songItem">
+                            <span>05</span>
+                            <img src="images/A4.jpg" alt="">
+                            <i class="bi playIcon bi-play-circle-fill"  onclick="playMusic('audio/5.mp3')"></i>
+                            <a href="#">  <h5>Satranga <br> <div class="subtitle">Arijit Singh</div></h5></a></li>
+                        <li class="songItem">
+                            <span>06</span>
+                            <img src="images/A5.webp" alt="">
+                            <i class="bi playIcon bi-play-circle-fill"  onclick="playMusic('audio/6.mp3')"></i>
+                            <a href="#"> <h5>Kudmayi <br> <div class="subtitle">Arijit Singh</div></h5></a></li>
+                        <li class="songItem">
+                            <span>07</span>
+                            <img src="images/A6.jpg" alt="">
+                            <i class="bi playIcon bi-play-circle-fill" onclick="playMusic('audio/7.mp3')"></i>
+                            <a href="#" > <h5>Tum Kya Mile <br> <div class="subtitle">Shreya Ghoshal</div></h5></a></li>
+
+                        <li class="songItem">
+                            <span>08</span>
+                            <img src="images/A7.jpg" alt="">
+                             <i class="bi playIcon bi-play-circle-fill" onclick="playMusic('audio/8.mp3')"></i>
+                             <a href="#"><h5>Humsafar <br> <div class="subtitle">Badri ki Dulhaniya</div></h5></a></li>
+
+                        <li class="songItem">
+                            <span>09</span>
+                            <img src="images/A8.jpg" alt="">
+                            <i class="bi playIcon bi-play-circle-fill" onclick="playMusic('audio/9.mp3')"></i>
+                           <a href="#"><h5>Saathiya <br> <div class="subtitle">Singham</div></h5></a> </li>
+
+
+                        <li class="songItem">
+                            <span>10</span>
+                            <img src="images/A9.jpg" alt="">
+                            <i class="bi playIcon bi-play-circle-fill" onclick="playMusic('audio/10.mp3')"></i>
+                           <a href="#"><h5>Tu Jane Na <br> <div class="subtitle">Ajab Prem ki Gajab Kahani</div></h5></a></li>
+
+                        <li class="songItem">
+                            <span>11</span>
+                            <img src="images/A10.jpg" alt="">
+                            <i class="bi playIcon bi-play-circle-fill" onclick="playMusic('audio/11.mp3')" ondblclick="updateSongDetails() "></i>
+                            <a href="#"><h5>Shiela ki Jawani <br> <div class="subtitle">Tees Maar Khan</div></h5></a></li>
+
+
+                        <li class="songItem">
+                            <span>12</span>
+                            <img src="images/A11.jpg" alt="">
+                            <i class="bi playIcon bi-play-circle-fill" onclick="playMusic('audio/12.mp3')"></i>
+                            <a href="#"><h5>Khuda Jane <br> <div class="subtitle">Besharam</div></h5></a></li>
+
+
+                        <li class="songItem">
+                            <span>13</span>
+                            <img src="images/A12.jpg" alt="">
+                            <i class="bi playIcon bi-play-circle-fill" onclick="playMusic('audio/13.mp3')"></i>
+                            <a href="#"> <h5>Chand Sifarish <br> <div class="subtitle">Fanna</div></h5></a></li>
+
+
+                        <li class="songItem">
+                            <span>14</span>
+                            <img src="images/A13.jpg" alt="">
+                            <i class="bi playIcon bi-play-circle-fill" onclick="playMusic('audio/14.mp3')"></i>
+                            <a href="#"><h5>Ek Dil Hai<br> <div class="subtitle">Padmavat</div></h5></a></li>
+
+
+                        <li class="songItem">
+                            <span>15</span>
+                            <img src="images/A14.jpg" alt="">
+                            <i class="bi playIcon bi-play-circle-fill" onclick="playMusic('audio/15.mp3')"></i>
+                            <a href="#"><h5>Mastani <br> <div class="subtitle">Deewani Mastani</div></h5></a></li>
+
+
+                        <li class="songItem">
+                            <span>16</span>
+                            <img src="images/1.jpg" alt="">
+                            <i class="bi playIcon bi-play-circle-fill" onclick="playMusic('audio/2.mp3')"></i>
+                            <a href="#"><h5>On My Way <br> <div class="subtitle">Alan Walker</div></h5></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="song_side">
+            <nav>
+                <ul>
+                   <li>Discover <span></span></li>
+                   <li>My Library</li>
+                   <li>Radio</li>
+                </ul>
+                <div class="search">
+                    <i class="bi bi-search" onclick="search()"></i> 
+                    <input type="text" id="searchInput" placeholder="Search Music">
+                 
+                </div>
+                <div class="user">
+                    <img src="images/spotifyicon2.png" alt="">
+                </div>
+            </nav>
+
+            <div class="content">
+                <h1>ENJOY MUSIC</h1>
+                <p> Enjoy the latest and your favorite songs on this website.</p>
+                <div class="buttons">
+                    <button id="playPauseButton" onclick="togglePlayPause()">PLAY</button>
+                    <button id="followButton" onclick="toggleFollow()">FOLLOW</button>
+                </div>
+            </div>
+
+            <div class="popular_song" >
+                <div class="h4">
+                    <h4>POPULAR SONG</h4>
+                    <div class="button_s">
+                        <!-- <i class="bi bi-arrow-left" id="pop_song_left"></i>
+                        <i class="bi bi-arrow-right" id="pop_song_right"></i> -->
+                    </div>
+                </div>
+
+                <div class="pop_song">
+                   
+                    <li class="songItem">
+                        <div class="img_play">
+                            <i class="bi playIcon bi-play-circle-fill" onclick="playMusic('audio/1.mp3')"></i>
+                            <img src="images/A1.jpg" alt="">
+                        </div>
+                        <h5>Agar Tum Sath Ho <br> <div class="subtitle">Tamasha</div></h5>
+                    </li>
+                    <li class="songItem">
+                        <div class="img_play">
+                            <i class="bi playIcon bi-play-circle-fill" onclick="playMusic('audio/3.mp3')"></i>
+                            <img src="images/A2.avif" alt="">
+                        </div>
+                        <h5>Dilbar <br> <div class="subtitle">Satyamev Jayate</div></h5>
+                    </li>
+                    <li class="songItem">
+                        <div class="img_play">
+
+                            <i class="bi playIcon bi-play-circle-fill" onclick="playMusic('audio/4.mp3')"></i>
+                            <img src="images/A3.jpg" alt="">
+                        </div>
+                        <h5>Param Sundari <br> <div class="subtitle">Mimi</div></h5>
+                    </li>
+                    <li class="songItem">
+                        <div class="img_play">
+
+                            <i class="bi playIcon bi-play-circle-fill" onclick="playMusic('audio/5.mp3')"></i>
+                            <img src="images/A4.jpg" alt="">
+                        </div>
+                        <h5>Satranga <br> <div class="subtitle">Animal</div></h5>
+                    </li>
+                    <li class="songItem">
+                        <div class="img_play">
+
+                            <i class="bi playIcon bi-play-circle-fill" onclick="playMusic('audio/6.mp3')"></i>
+                            <img src="images/A5.webp" alt="">
+                        </div>
+                        <h5>Kudmayi <br> <div class="subtitle">Rocky aur Rani ki Prem Kahani</div></h5>
+                    </li>
+                    <li class="songItem">
+                        <div class="img_play">
+
+                            <i class="bi playIcon bi-play-circle-fill" onclick="playMusic('audio/7.mp3')"></i>
+                            <img src="images/A6.jpg" alt="">
+                        </div>
+                        <h5>Tum Kya Mile <br> <div class="subtitle">Rocky aur Rani ki Prem Kahani</div></h5>
+                    </li>
+                    <li class="songItem">
+                        <div class="img_play">
+
+                            <i class="bi playIcon bi-play-circle-fill" onclick="playMusic('audio/8.mp3')"></i>
+                            <img src="images/A7.jpg" alt="">
+                        </div>
+                      <h5>Humsafar <br> <div class="subtitle">Badri ki Dulhaniya</div></h5>
+                    </li>
+                    <li class="songItem">
+                        <div class="img_play">
+
+                            <i class="bi playIcon bi-play-circle-fill" onclick="playMusic('audio/9.mp3')"></i>
+                            <img src="images/A8.jpg" alt="">
+                        </div>
+                        <h5>Saathiya <br> <div class="subtitle">Singham</div></h5>
+                    </li>
+                    <li class="songItem">
+                        <div class="img_play">
+
+                            <i class="bi playIcon bi-play-circle-fill" onclick="playMusic('audio/10.mp3')"></i>
+                            <img src="images/A9.jpg" alt="">
+                        </div>
+                        <h5>Tu Jane Na <br> <div class="subtitle">Ajab Prem ki Gajab Kahani</div></h5>
+                    </li>
+                    <li class="songItem">
+                        <div class="img_play">
+
+                            <i class="bi playIcon bi-play-circle-fill" onclick="playMusic('audio/11.mp3')"></i>
+                            <img src="images/A10.jpg" alt="">
+                        </div>
+                        <h5>Shiela ki Jawani <br> <div class="subtitle">Tees Maar Khan</div></h5>
+                    </li>
+                    <li class="songItem">
+                        <div class="img_play">
+
+                            <i class="bi playIcon bi-play-circle-fill" onclick="playMusic('audio/12.mp3')"></i>
+                            <img src="images/A11.jpg" alt="">
+                        </div>
+                        <h5>Khuda Jane <br> <div class="subtitle">Besharam</div></h5>
+                    </li>
+                    <li class="songItem">
+                        <div class="img_play">
+
+                            <i class="bi playIcon bi-play-circle-fill" onclick="playMusic('audio/13.mp3')"></i>
+                            <img src="images/A12.jpg" alt="">
+                        </div>
+                       <h5>Chand Sifarish <br> <div class="subtitle">Fanna</div></h5>
+                    </li>
+                    <li class="songItem">
+                        <div class="img_play">
+
+                            <i class="bi playIcon bi-play-circle-fill" onclick="playMusic('audio/14.mp3')"></i>
+                            <img src="images/A13.jpg" alt="">
+                        </div>
+                        <h5>Ek Dil Hai<br> <div class="subtitle">Padmavat</div></h5>
+                    </li>
+                    <li class="songItem">
+                        <div class="img_play">
+
+                            <i class="bi playIcon bi-play-circle-fill" onclick="playMusic('audio/15.mp3')"></i>
+                            <img src="images/A14.jpg" alt="">
+                        </div>
+                        <h5>Mastani <br> <div class="subtitle">Deewani Mastani</div></h5>
+                    </li>
+                    <li class="songItem">
+                        <div class="img_play">
+
+                            <i class="bi playIcon bi-play-circle-fill" onclick="playMusic('audio/2.mp3')"></i>
+                            <img src="images/1.jpg" alt="">
+                        </div>
+                       <h5>On My Way <br> <div class="subtitle">Alan Walker</div></h5>
+                    </li>
+               
+                </div>
+            </div>
+            <div class="popular_artists">
+                <div class="h4">
+                    <h4>Popular Artists</h4>
+                    <div class="button_s">
+                        <!-- <i class="bi bi-arrow-left" id="pop_song_left"></i>
+                        <i class="bi bi-arrow-right" id="pop_song_right"></i> -->
+                    </div>
+                </div>
+                <div class="item">
+                    <li>
+                        <img src="images/3.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="images/4.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="images/5.webp" alt="">
+                    </li>
+                    <li>
+                        <img src="images/6.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="images/2.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="images/7.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="images/8.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="images/9.webp" alt="">
+                    </li>
+                    <li>
+                        <img src="images/10.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="images/13.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="images/12.jpg" alt="">
+                    </li>
+                    
+                    
+                   
+                </div>
+            </div>
+            
+        </div>
+        <div class="play">
+            <div class="wave" id="wave">
+                <div class="wave1"></div>
+                <div class="wave1"></div>
+                <div class="wave1"></div>
+            </div>
+
+            <img id="currentSongImage" src="images/display.jpg" alt="">
+            <h5 id="currentSong">ENJOY MUSIC <br>
+            <div class="subtitle">Spotifyclone</div>
+            </h5>
+            
+            <div class="icon">
+                <i class="bi bi-music-note-beamed" ></i>
+                <i class="bi bi-skip-start-fill" onclick="prevSong()"></i>
+                <i class="bi bi-play-fill" id="toggleButton" onclick="toggle()"></i>
+                <!-- <i class="bi bi-play-fill" ></i> -->
+                <!-- <i class="bi bi-pause-fill"></i>   -->
+                <i class="bi bi-skip-end-fill"  onclick="nextSong()"></i>
+                <i class="bi up bi-download"  onclick="downloadSong()"></i>
+            </div>
+
+            <span id="currentStart">0:00</span>
+
+            <div class="bar">
+                <input type="range" id="seek-bar" min="0" step="1" value="0">
+                <!-- <div class="bar2" id="bar2"></div>
+                <div class="dot"></div>     -->
+            </div>
+            <span id="currentStart">0:30</span>
+            <div class="vol">
+                <i class="bi bi-volume-up-fill" id="volumeIcon"></i>
+                <input type="range" id="volume" min="0" max="1" step="0.01" value="0.5">
+               </div>
+            </div>
+        </div>
+
+       
+     </header>
+    
+</body>
+</html>
